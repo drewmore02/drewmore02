@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,600");
+
+:root {
+  --background: #8c52ff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: rgb(256, 256, 256);
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+}
+
+/*navigation styles start here*/
+@media screen and (min-width: 600px) {
+  header {
+    background: var(--background);
+    text-align: center;
+    position: sticky;
+    top: 0;
+    /*z-index: 999;*/
+    width: 100%;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-toggle-label span,
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    display: block;
+    background: white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+  }
+
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    content: "";
+    position: absolute;
+  }
+
+  .nav-toggle-label span::before {
+    bottom: 7px;
+  }
+
+  .nav-toggle-label span::after {
+    top: 7px;
+  }
+
+  nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: var(--background);
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+    z-index: 10;
+  }
+
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    z-index: 6;
+  }
+
+  nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+  }
+  nav a:hover {
+    color: #000;
+  }
+
+  .nav-toggle:checked ~ nav {
+    transform: scale(1, 1);
+    z-index: 10;
+  }
+
+  .nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+  }
+}
+/*End of regular nav*/
+
+.nav-toggle-label {
+  display: none;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+}
+
+.logo {
+  grid-column: 2 / 3;
+}
+
+nav {
+  position: sticky;
+  text-align: left;
+  transition: none;
+  transform: scale(1, 1);
+  background: none;
+  top: 0;
+  left: initial;
+  height: 5em;
+  z-index: 10;
+
+  grid-column: 3 / 4;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav li {
+  margin-left: 4em;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+nav a {
+  opacity: 1;
+  position: relative;
+}
+
+nav a::before {
+  content: "";
+  display: block;
+  height: 5px;
+  background: black;
+  position: abolsute;
+  top: -0.75em;
+  left: 0;
+  right: 0;
+  transform: scale(0, 1);
+  transition: transform ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  transform: scale(1, 1);
+}
+
+/*navigation styles end here*/
+
+/*home page content starts here*/
+.home-outer {
+  background-image: url(women-in-cs.jpeg);
+  background-position: center center;
+  background-color: white;
+  background-blend-mode: multiply;
+  height: 100vh;
+}
+
+.home-content {
+  width: 100%;
+  position: absolute;
+  height: calc(100vh - 5em);
+  background: rgba(250, 250, 250, 0.6);
+  z-index: 1;
+  display: grid;
+  grid-template-rows: 2;
+}
+
+/*top of page*/
+
+.slogan {
+  margin: 0;
+  font-size: 3rem;
+  text-align: center;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+/*center bottom of page*/
+.center {
+  position: relative;
+  width: auto;
+  height: 100%;
+}
+
+.light-purple {
+  background-color: #d3bdff;
+  margin: 2em 1em 0em 1em;
+  width: auto;
+  padding: 0;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin: 0;
+}
