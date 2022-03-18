@@ -91,12 +91,12 @@ footer{
   }
 
   .menuButton {
-    background-color: lightgray;
+    background-color: transparent;
     justify-content: center;
     width: 100%;
     font-size: 20px;
     text-transform: uppercase;
-    text-align: left;
+    text-align: center;
     color: white;
     border: none;
     cursor: pointer;
@@ -125,7 +125,7 @@ footer{
 
   .dropDown:hover .dropDownChild {
     display: block;
-    text-align: left;
+    text-align: center;
   }
 
   .dropDown ul {
