@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:300,600");
 
-:root {
-  --background: lightgray;
-}
-
 *,
 *::before,
 *::after {
@@ -17,20 +13,34 @@ body {
   font-weight: 400;
 }
 
-header {
-  background: var(--background);
+header{
+  display: flex;
+  justify-content: space-between;
+  background-color: #d9d9d9;
+  align-items: center;
+}
+
+footer{
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #d9d9d9;
+}
+
+.header {
+  background-color: #8c52ffa9;
   text-align: center;
   position: sticky;
   top: 0;
   /*z-index: 999;*/
   width: 100%;
-  display: grid;
-    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-nav {
+.navBar {
   position: sticky;
-  text-align: left;
+  text-align: center;
   transition: none;
   transform: scale(1, 1);
   background: none;
@@ -39,25 +49,25 @@ nav {
   height: 5em;
   z-index: 10;
 
-  grid-column: 3 / 4;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 
-nav ul {
+.navBar ul {
   display: flex;
   list-style: none;
 }
 
-nav li {
+.navBar li {
   margin-left: 3em;
   margin-bottom: 0;
   text-align: center;
 }
 
 
-nav a {
+.navBar a {
   color: white;
   text-decoration: none;
   font-size: 1.2rem;
@@ -65,49 +75,69 @@ nav a {
   opacity: 1;
   transition: opacity 150ms ease-in-out;
 }
-nav a:hover {
+.navBar a:hover {
   color: #000;
 }
 
-.menuButton{
+.dropDown{
   display: none;
 }
 
 /*navigation styles start here*/
 @media (max-width: 800px) {
-
-  h2{
+  
+  .navBar{
     display: none;
   }
 
-  nav::before{
-    clear: both;
+  .menuButton {
+    background-color: lightgray;
+    justify-content: center;
+    width: 100%;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: left;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding:20px;
+    margin-top:15px;
   }
 
-  nav ul {
-    flex-direction: column;
-    margin: 0;
-    padding: 0%;
-    list-style: none;
-  }
-  
-  nav li {
-    margin-top: 1em;
+  .dropDown {
+    position: relative;
+    display: inline-block;
   }
 
-  nav {
-    flex-direction: column;
-    transform: scale(1, 0);
-    transform-origin: top;
-    transition: transform 400ms ease-in-out;
+  .dropDownChild {
+    display: none;
+    min-width: 200px;
   }
 
-  .menuButton{
+  .dropDownChild a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 1;
+    transition: opacity 150ms ease-in-out;
+  }
+
+  .dropDown:hover .dropDownChild {
     display: block;
+    text-align: left;
   }
 
-  .menuButton:hover ~ nav{
-    transform: scaleY(1);
+  .dropDown ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    z-index: 6;
+  }
+
+  .dropDown li {
+    margin-bottom: 1em;
+    margin-left: 1em;
   }
 }
 /*End of regular nav*/
@@ -117,8 +147,8 @@ nav a:hover {
 }
 
 h2{
-  text-align: left;
-  color: white;
+  text-align: center;
+  color: #8520d2;
   font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -139,28 +169,4 @@ h2{
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-/*center bottom of page*/
-.center {
-  position: relative;
-  width: auto;
-  height: 100%;
-}
-
-.light-purple {
-  background-color: #d3bdff;
-  margin: 2em 1em 0em 1em;
-  width: auto;
-  padding: 0;
-}
-
-.subtitle {
-  font-size: 1.5rem;
-  margin: 0;
 }

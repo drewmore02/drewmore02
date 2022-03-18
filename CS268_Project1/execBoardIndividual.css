@@ -1,11 +1,12 @@
 .photo{
-    width: 100%;
+    width: 95%;
+    margin-left: 2%;
 }
 
-.omtechLogo{
-    margin-top: 30%;
-    width: 90%;
-    margin-left: 3.5%;
+.memberPhoto{
+    margin-top: 5%;
+    width: 95%;
+    margin-left: 2%;
 }
 
 .photoContainer{
@@ -61,7 +62,8 @@ h1{
     padding-right: 10%;
 }
 
-h2{
+.execNameHeader{
+    color: black;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
