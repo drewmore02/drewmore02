@@ -21,7 +21,7 @@ header{
 }
 
 footer{
-  margin-top: 5%;
+  margin-top: 2%;
   display: flex;
   justify-content: space-between;
   background-color: #d9d9d9;
@@ -162,11 +162,33 @@ h2{
 /*top of page*/
 
 .slogan {
-  margin: 0;
+  margin-left: 10%;
   font-size: 3rem;
   text-align: center;
-  width: auto;
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.footerLink{
+  text-decoration: none;
+  color: black;
+}
+
+.footerLink:link{
+  color: darkorchid;
+}
+
+.footerLink:visited{
+  color:purple;
+}
+
+.footerLink:hover{
+  color: slategray;
+  text-decoration: underline;
+}
+
+.footerLink:active{
+  color: purple;
 }
