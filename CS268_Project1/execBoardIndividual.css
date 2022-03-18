@@ -1,0 +1,71 @@
+.photo{
+    width: 100%;
+}
+
+.omtechLogo{
+    margin-top: 30%;
+    width: 90%;
+    margin-left: 3.5%;
+}
+
+.photoContainer{
+    float: left;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+.pageHeader{
+    background-color: #8c52ffa9;
+    max-width: 35%;
+    text-align: center;
+}
+
+h1{
+    color: white;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5em;
+    flex: 0 1 25%;
+    border-style: ridge;
+    border-radius: 10px;
+    border-width: 2px;
+    max-width: 80%;
+    padding: 10px 10px 0px;
+    box-shadow: 0 4px 8px 0 lightgray;
+    background-color: #8c52ff44;
+    margin: 5px 10px;
+}
+
+.container{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nameHeader{
+    padding-right: 17.5%;
+}
+
+.yearHeader{
+    padding-right: 13.5%;
+}
+
+.name{
+    padding-right: 10%;
+}
+
+.year{
+    padding-right: 10%;
+}
+
+h2{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+p.bioFont{
+    font-size: 25px;
+    font-family:monospace;
+}
