@@ -139,6 +139,10 @@ footer{
     margin-bottom: 1em;
     margin-left: 1em;
   }
+  
+  .dropDown li a:hover {
+    color: black;
+  }
 }
 /*End of regular nav*/
 
