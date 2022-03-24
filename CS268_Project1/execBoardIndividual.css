@@ -58,16 +58,34 @@ h1{
     padding-right: 10%;
 }
 
+.collinName{
+    padding-right: 2.5%;
+}
+
+.collinYear{
+    padding-right: 7.5%;
+}
+
+.hannahYear{
+    padding-right: 6%;
+}
+
 .year{
     padding-right: 10%;
 }
 
 .execNameHeader{
     color: black;
+    text-align: left;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 p.bioFont{
     font-size: 25px;
     font-family:monospace;
+}
+
+.subtitleFont{
+    font-size: 20px;
+    font-family: monospace;
 }
