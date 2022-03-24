@@ -79,6 +79,22 @@ footer{
   color: #000;
 }
 
+.navBar a::before {
+  content: "";
+  height: 5px;
+  display: block;
+  background-color: black;
+  top: -0.75em;
+  left: 0;
+  right: 0;
+  transform: scale(0, 1);
+  transition: transform ease-in-out 250ms;
+}
+
+.navBar a:hover::before {
+  transform: scale(1, 1);
+}
+
 .dropDown{
   display: none;
 }
@@ -138,6 +154,10 @@ footer{
   .dropDown li {
     margin-bottom: 1em;
     margin-left: 1em;
+  }
+  
+  .dropDown li a:hover {
+    color: black;
   }
 }
 /*End of regular nav*/
