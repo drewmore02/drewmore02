@@ -23,6 +23,7 @@
     background-color: lightgrey;
     margin: 5px 10px;
     min-height: 100%;
+    overflow: scroll;
 }
 
 .eventHeader{
