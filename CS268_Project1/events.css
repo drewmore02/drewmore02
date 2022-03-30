@@ -32,7 +32,7 @@
 .event-image {
     border-radius: 10px;
     width: 100%;
-    max-height: 40%;
+    max-height: 35%;
 }
 
 @media (max-width: 800px) and  (min-width: 601px) {
