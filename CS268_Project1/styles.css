@@ -101,6 +101,10 @@ footer{
 
 /*navigation styles start here*/
 @media (max-width: 800px) {
+
+  .contactUs{
+    padding-right: 2.5%;
+  }
   
   .navBar{
     display: none;
