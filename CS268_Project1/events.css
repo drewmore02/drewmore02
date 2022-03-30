@@ -4,8 +4,6 @@
     justify-content: center;
     flex-direction: row;
     padding: 5% 0% 0% 0%;
-    flex: 1;
-    min-height: 100%;
 }
 
 .event-card {
@@ -13,7 +11,7 @@
     flex-direction: column;
     text-align: center;
     line-height: 1em;
-    flex: 1 1 25%;
+    flex: 0 1 25%;
     border-style: ridge;
     border-radius: 10px;
     border-width: 2px;
@@ -22,7 +20,7 @@
     box-shadow: 0 4px 8px 0 lightgray;
     background-color: lightgrey;
     margin: 5px 10px;
-    min-height: 100%;
+    overflow: scroll;
 }
 
 .event-image {
