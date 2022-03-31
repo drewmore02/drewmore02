@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,600");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: rgb(256, 256, 256);
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #d9d9d9;
+  align-items: center;
+}
+
+footer {
+  margin-top: 2%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #d9d9d9;
+}
+
+.header {
+  background-color: #8c52ffa9;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  /*z-index: 999;*/
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navBar {
+  position: sticky;
+  text-align: center;
+  transition: none;
+  transform: scale(1, 1);
+  background: none;
+  top: 0;
+  left: initial;
+  height: 5em;
+  z-index: 10;
+
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.navBar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navBar li {
+  margin-left: 3em;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.navBar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  opacity: 1;
+  transition: opacity 150ms ease-in-out;
+}
+.navBar a:hover {
+  color: #000;
+}
+
+.navBar a::before {
+  content: "";
+  height: 5px;
+  display: block;
+  background-color: black;
+  top: -0.75em;
+  left: 0;
+  right: 0;
+  transform: scale(0, 1);
+  transition: transform ease-in-out 250ms;
+}
+
+.navBar a:hover::before {
+  transform: scale(1, 1);
+}
+
+.dropDown {
+  display: none;
+}
+
+/*navigation styles start here*/
+@media (max-width: 800px) {
+  .contactUs {
+    padding-right: 2.5%;
+  }
+
+  .navBar {
+    display: none;
+  }
+
+  .menuButton {
+    background-color: transparent;
+    justify-content: center;
+    width: 100%;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 20px;
+    margin-top: 15px;
+  }
+
+  .dropDown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropDownChild {
+    display: none;
+    min-width: 200px;
+  }
+
+  .dropDownChild a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 1;
+    transition: opacity 150ms ease-in-out;
+  }
+
+  .dropDown:hover .dropDownChild {
+    display: block;
+    text-align: center;
+  }
+
+  .dropDown ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    z-index: 6;
+  }
+
+  .dropDown li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+  }
+
+  .dropDown li a:hover {
+    color: black;
+  }
+
+  /*Styling for content during small browser*/
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .t1 {
+    order: 0;
+  }
+  .picture-cont1 {
+    order: 1;
+  }
+  .t2 {
+    order: 2;
+  }
+  .picture-cont2 {
+    order: 3;
+  }
+}
+/*End of regular nav*/
+
+.logo {
+  width: 100px;
+}
+
+h2 {
+  text-align: center;
+  color: #8520d2;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/*navigation styles end here*/
+
+/*about page content starts here*/
+
+.content {
+  background: lightgray;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.text {
+  padding: 10px;
+}
+
+.picture-cont1,
+.picture-cont2 {
+  background-color: black;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.first,
+.second {
+  width: 95%;
+}
+
+/* footer styling*/
+.footerLink {
+  text-decoration: none;
+  color: black;
+}
+
+.footerLink:link {
+  color: darkorchid;
+}
+
+.footerLink:visited {
+  color: purple;
+}
+
+.footerLink:hover {
+  color: slategray;
+  text-decoration: underline;
+}
+
+.footerLink:active {
+  color: purple;
+}
