@@ -1,0 +1,113 @@
+.photo{
+    border-radius: 10px;
+    width: 95%;
+    margin-left: 2%;
+}
+.memberPhoto{
+    border-radius: 10px;
+    margin-top: 5%;
+    width: 95%;
+    margin-left: 2%;
+}
+.photoContainer{
+    float: left;
+    display: flex;
+    flex-direction: column;
+    max-width: 25%;
+}
+
+.contentContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.pageHeader{
+    background-color: #8c52ffa9;
+    max-width: 35%;
+    text-align: center;
+}
+h1{
+    color: white;
+}
+.card{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5em;
+    border-style: ridge;
+    border-radius: 10px;
+    border-width: 2px;
+    padding: 10px 10px 0px;
+    box-shadow: 0 4px 8px 0 lightgray;
+    background-color: #8c52ff44;
+}
+
+@media (max-width: 800px){
+    .contentContainer{
+        flex-direction: column-reverse;
+    }
+
+    .photoContainer{
+        flex-direction: row;
+        margin-top: 2%;
+        max-width: 95%;
+    }
+
+    .photo{
+        max-width: 50%;
+    }
+
+    .memberPhoto{
+        max-width: 50%;
+    }
+
+    .pageHeader{
+        max-width: 50%;
+    }
+}
+
+.container{
+    display: flex;
+    justify-content: flex-start;
+}
+.nameHeader{
+    padding-right: 17.5%;
+}
+.yearHeader{
+    padding-right: 13.5%;
+}
+.name{
+    padding-right: 10%;
+}
+
+.collinName{
+    padding-right: 2.5%;
+}
+
+.collinYear{
+    padding-right: 7.5%;
+}
+
+.hannahYear{
+    padding-right: 6%;
+}
+
+.year{
+    padding-right: 10%;
+}
+
+.execNameHeader{
+    color: black;
+    text-align: left;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+p.bioFont{
+    font-size: 25px;
+    font-family:monospace;
+}
+
+.subtitleFont{
+    font-size: 20px;
+    font-family: monospace;
+}

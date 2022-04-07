@@ -30,7 +30,6 @@ footer{
 .header {
   background-color: #8c52ffa9;
   text-align: center;
-  position: sticky;
   top: 0;
   /*z-index: 999;*/
   width: 100%;
@@ -38,8 +37,15 @@ footer{
   justify-content: space-evenly;
 }
 
+.contactUs{
+  padding-left: 2.5%;
+}
+
+.facebookInfo{
+  padding-right: 2.5%;
+}
+
 .navBar {
-  position: sticky;
   text-align: center;
   transition: none;
   transform: scale(1, 1);
@@ -79,12 +85,32 @@ footer{
   color: #000;
 }
 
+.navBar a::before {
+  content: "";
+  height: 5px;
+  display: block;
+  background-color: black;
+  top: -0.75em;
+  left: 0;
+  right: 0;
+  transform: scale(0, 1);
+  transition: transform ease-in-out 250ms;
+}
+
+.navBar a:hover::before {
+  transform: scale(1, 1);
+}
+
 .dropDown{
   display: none;
 }
 
 /*navigation styles start here*/
 @media (max-width: 800px) {
+
+  .contactUs{
+    padding-right: 2.5%;
+  }
   
   .navBar{
     display: none;
@@ -138,6 +164,10 @@ footer{
   .dropDown li {
     margin-bottom: 1em;
     margin-left: 1em;
+  }
+  
+  .dropDown li a:hover {
+    color: black;
   }
 }
 /*End of regular nav*/
