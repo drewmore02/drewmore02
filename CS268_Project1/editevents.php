@@ -29,15 +29,19 @@ function fill_rows() {
   $(document).ready(function(){
     $(".row").click(function(){
       console.log("clicked");
-      $(this).children().each(function(i){
-        console.log(this.innerHTML);
-      });
+      let columns = $(this).children();
+      $("#edit-name").val(columns[1].innerText);
+      $("#edit-date").val(columns[2].innerText);
+      $("#edit-location").val(columns[3].innerText);
+      $("#edit-time").val(columns[4].innerText);
+      $("#edit-description").val(columns[5].innerText);
     });
   });
 </script>
 
 <div class="edit-container">
   <div class="edit-card">
+    <h2>Events</h2>
     <table>
       <tr>
         <th>Event Name</th>
@@ -47,7 +51,36 @@ function fill_rows() {
     </table>
   </div>
   <div class="edit-card">
-    <p>show form here</p>
+    <h2>Edit</h2>
+    <form method="post">
+      <label for="edit-name">Name</label><br>
+      <input id="edit-name" name="edit-name" type="text"><br>
+      <label for="edit-date">Date</label><br>
+      <input id="edit-date" name="edit-date" type="text"><br>
+      <label for="edit-location">Location</label><br>
+      <input id="edit-location" name="edit-location" type="text"><br>
+      <label for="edit-time">Time</label><br>
+      <input id="edit-time" name="edit-time" type="text"><br>
+      <label for="edit-description">Description</label><br>
+      <input id="edit-description" name="edit-description" type="text"><br>
+      <input type="submit" value="Update">
+    </form>
+  </div>
+  <div class="edit-card">
+    <h2>Add</h2>
+    <form method="post">
+      <label for="add-name">Name</label><br>
+      <input id="add-name" name="add-name" type="text"><br>
+      <label for="add-date">Date</label><br>
+      <input id="add-date" name="add-date" type="text"><br>
+      <label for="add-location">Location</label><br>
+      <input id="add-location" name="add-location" type="text"><br>
+      <label for="add-time">Time</label><br>
+      <input id="add-time" name="add-time" type="text"><br>
+      <label for="add-description">Description</label><br>
+      <input id="add-description" name="add-description" type="text"><br>
+      <input type="submit" value="Add">
+    </form>
   </div>
 </div>
 
