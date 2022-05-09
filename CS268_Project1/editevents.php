@@ -1,7 +1,10 @@
 <?php
-
+session_start();
+if(!isset($_SESSION['success']) || (isset($_SESSION['success']) && $_SESSION['success'] === FALSE)){
+    die(header("Location: 404.php"));
+}
 function fill_rows() {
-  require_once('sql_conn.php'); 
+  require_once('databaseconn.php'); 
 
   $query = "SELECT id, name, eventDate, location, eventTime, description FROM groupevents";
 
@@ -85,5 +88,3 @@ function fill_rows() {
 </div>
 
 <?php include("templates/bottom.php"); ?>
-
-  

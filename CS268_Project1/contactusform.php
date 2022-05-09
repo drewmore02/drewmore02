@@ -1,4 +1,5 @@
 <?php
+require_once('databaseconn.php');
 
 $nameErr = "";
 $emailErr = "";
@@ -20,7 +21,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $name = $data;
         if(!preg_match("/^[a-zA-Z-' ]*$/", $name)){
             $nameErr = "Only letters and spaces can be used";
-            echo '<script>window.location.replace("./contactus.html");alert("Only letters or spaces can be used!");</script>';
+            echo '<script>window.location.replace("./contactus.html");alert("Only letters or spaces can be used!");</script>'
+            exit();;
         }
     }
     if(empty($_REQUEST['email'])){
@@ -34,6 +36,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
             $emailErr = "Invalid email";
             echo '<script>window.location.replace("./contactus.html");alert("Invalid email!");</script>';
+            exit();
         }
     }
     if(empty($_REQUEST['message'])){
@@ -52,11 +55,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $headers .= 'From: '.$email."\r\n". 'Reply-To: '.$email."\r\n" . 'X-Mailer: PHP/' . phpversion();
         if(mail("softballove456@gmail.com", $subject, $message, $headers)){
             echo 'Your form has been submitted.';
+            exit();
         }else{
-            echo '2 Your form was not submitted. Please try again!';
+            echo 'Your form was not submitted. Please try again!';
+            exit();
         }
     }else{
         echo 'Your form was not submitted. Please try again!';
+        exit();
     }
 }
 

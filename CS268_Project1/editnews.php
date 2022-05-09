@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(!isset($_SESSION['success']) || (isset($_SESSION['success']) && $_SESSION['success'] === FALSE)){
+  die(header("Location: 404.php"));
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,20 +23,7 @@
     <h2>Organization for Minorities in TECHnology</h2>
   </header>
   <div class="header">
-    <div class="navBar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="aboutus.html">About</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="meettheboard.html">Board</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="contactus.html">Contact Us</a></li>
-            <li><a href="loginpage.php">Admin Login</a></li>
-        </ul>
-    </div>
-    <div class="dropDown">
-        <button class="menuButton">Menu</button>
-        <div class="dropDownChild">
+        <div class="navBar">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="aboutus.html">About</a></li>
@@ -41,18 +34,21 @@
                 <li><a href="loginpage.php">Admin Login</a></li>
             </ul>
         </div>
+        <div class="dropDown">
+            <button class="menuButton">Menu</button>
+            <div class="dropDownChild">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="meettheboard.html">Board</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="loginpage.php">Admin Login</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
-</div>
-  <div class="home-outer">
-    <img src="images/omtechBanner.jpeg" alt="OmTech Banner">
-  </div>
-  <div class="home-content">
-    <div class="slogan">
-      <p>
-        "Support, promote, and encourage women and minorities in information technologies."
-      </p>
-    </div>
-  </div>
   <footer>
     <div class = "contactUs">
       <h4>Contact Us</h4>

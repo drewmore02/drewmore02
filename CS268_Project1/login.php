@@ -1,13 +1,14 @@
 <?php
-require_once("sql_conn.php");
-
 session_start();
+require_once('databaseconn.php');
 
 $username = "";
 $password = "";
 
 $username_err = "";
 $password_err = "";
+$_SESSION['success'] = FALSE;
+$success = TRUE;
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $tempUser = trim($_POST["username"]);
@@ -37,19 +38,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $row = mysqli_fetch_assoc($result);
 
             if($row['username'] === $username && $row['passcode'] === $password){
-                header("Location: ./adminhome.html");
+                $_SESSION['success'] = $success;
+                header("Location: ./adminhome.php");
             }else{
-                echo '<script>window.location.replace("./login.html");alert("Incorrect username or password!");</script>';
-                exit();
+                echo '<script>window.location.replace("./loginpage.php");alert("Incorrect username or password!");</script>';
             }
         }else{
-            echo '<script>window.location.replace("./login.html");alert("Incorrect username or password!");</script>';
-            exit();
+            echo '<script>window.location.replace("./loginpage.php");alert("Incorrect username or password!");</script>';
         }
         
     }else{
-        echo '<script>window.location.replace("./login.html");alert("Please enter a username and password!");</script>';
-        exit();
+        echo '<script>window.location.replace("./loginpage.php");alert("Please enter a username and password!");</script>';
     }
 }
 ?>
