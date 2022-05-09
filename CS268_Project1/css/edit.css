@@ -1,0 +1,32 @@
+.edit-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 3% 0% 0% 0%;
+    flex: 1;
+    min-height: 100%;
+}
+
+.edit-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 1em;
+    flex: 1 1 25%;
+    border-style: ridge;
+    border-radius: 10px;
+    border-width: 2px;
+    max-width: 23%;
+    padding: 10px 10px 0px;
+    box-shadow: 0 4px 8px 0 lightgray;
+    background-color: lightgrey;
+    margin: 5px 10px;
+}
+
+th, td {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
