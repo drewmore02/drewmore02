@@ -1,10 +1,9 @@
 .edit-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     flex-direction: row;
-    padding: 3% 0% 0% 0%;
-    flex: 1;
-    min-height: 100%;
+    padding: 5% 0% 5% 0%;
 }
 
 .edit-card {
@@ -12,11 +11,11 @@
     flex-direction: column;
     text-align: center;
     line-height: 1em;
-    flex: 1 1 25%;
+    flex: 0 1 25%;
     border-style: ridge;
     border-radius: 10px;
     border-width: 2px;
-    max-width: 23%;
+    max-width: 20%;
     padding: 10px 10px 0px;
     box-shadow: 0 4px 8px 0 lightgray;
     background-color: lightgrey;
@@ -29,4 +28,25 @@ th, td {
 
 .hidden {
     display: none;
+}
+
+@media (max-width: 600px){
+    .edit-card {
+        flex: 1 1 100%;
+        max-width: 75%;
+    }
+
+    .edit-container{
+        padding: 4% 0% 4% 0%;
+    }
+}
+
+@media (max-width: 800px) and  (min-width: 601px) {
+    .edit-card {
+        max-width: 40%;
+    }
+
+    .edit-container{
+        padding: 4.75% 0% 4.75% 0%;
+    }
 }
