@@ -1,6 +1,6 @@
 <?php
 session_start();
-echo $_SESSION['success'];
+//echo $_SESSION['success'];
 if(!isset($_SESSION['success']) || (isset($_SESSION['success']) && $_SESSION['success'] === FALSE)){
     die(header("Location: 404.php"));
 }

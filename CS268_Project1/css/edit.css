@@ -15,7 +15,7 @@
     border-style: ridge;
     border-radius: 10px;
     border-width: 2px;
-    max-width: 20%;
+    max-width: 24%;
     padding: 10px 10px 0px;
     box-shadow: 0 4px 8px 0 lightgray;
     background-color: lightgrey;
@@ -26,8 +26,32 @@ th, td {
     text-align: center;
 }
 
+table.events tr:hover td {
+    background-color: rgb(185, 184, 184);
+}
+
 .hidden {
     display: none;
+}
+
+button {
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(155, 151, 151);
+}
+
+button:hover {
+    background-color: rgb(114, 111, 111);
+    box-shadow: 0px 0px 4px 1px rgb(95, 93, 93);
+}
+
+#edit-description, #add-description {
+    height: 200px;
+    overflow-wrap: anywhere;
 }
 
 @media (max-width: 600px){

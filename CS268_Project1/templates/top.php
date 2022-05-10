@@ -9,6 +9,7 @@
   <link rel="icon" type="image/x-icon" href="images/myIcon.ico">
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/edit.css" />
+  <link rel="stylesheet" href="css/contactUs.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
