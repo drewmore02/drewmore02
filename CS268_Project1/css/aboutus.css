@@ -1,0 +1,77 @@
+.card{
+    flex: 1;
+    display: flex;
+    flex-direction: row-reverse;
+    line-height: 1.5em;
+    border-style: ridge;
+    border-radius: 10px;
+    border-width: 2px;
+    padding: 10px 10px 0px;
+    box-shadow: 0 4px 8px 0 lightgray;
+    background-color: #8c52ff44;
+    margin: 5px 10px;
+}
+
+.pageHeader{
+    background-color: #8c52ffa9;
+    max-width: 35%;
+    text-align: center;
+}
+h1{
+    color: white;
+}
+
+.container{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.photoContainer{
+    max-width: 100%;
+    margin-bottom: 2.5%;
+}
+
+.slides{
+    display: none;
+}
+
+.fade{
+    animation-name: fade;
+    animation-duration: 1.75s;
+}
+
+@keyframes fade{
+    from{opacity: .3}
+    to{opacity: 1}
+}
+
+.photo{
+    border-radius: 10px;
+    max-width: 100%;
+    max-height: 400px;
+}
+
+.textSection{
+    max-width: 100%;
+    padding: 2.5%;
+}
+
+@media (max-width: 800px){
+    .pageHeader{
+        max-width: 50%;
+    }
+
+    .photoContainer{
+        max-width: 80%;
+    }
+    
+    .textSection{
+        max-width: 100%;
+    }
+}
+
+.aboutFont{
+    text-align: center;
+    font-size: 20px;
+}

@@ -34,7 +34,7 @@ table.events tr:hover td {
     display: none;
 }
 
-button {
+.editButton {
     height: 20px;
     width: 20px;
     display: inline-block;
@@ -44,7 +44,7 @@ button {
     background-color: rgb(155, 151, 151);
 }
 
-button:hover {
+.editButton:hover {
     background-color: rgb(114, 111, 111);
     box-shadow: 0px 0px 4px 1px rgb(95, 93, 93);
 }

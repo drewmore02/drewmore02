@@ -3,8 +3,19 @@
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: row;
-    padding: 5% 0% 5% 0%;
+    padding: 1.5% 0% 1.5% 0%;
   }
+
+.pageHeader {
+    background-color: #8c52ffa9;
+    max-width: 50%;
+    text-align: center;
+}
+
+h1{
+    color: white;
+}
+
 .card{
     display: flex;
     flex-direction: column;
@@ -44,12 +55,20 @@
         max-width: 100%;
         margin: 5%;
     }
+
+    .pageHeader {
+        max-width: 95%;
+    }
 }
 
 @media (max-width: 800px) and  (min-width: 601px) {
     .card {
         flex: 0 1 50%;
         max-width: 40%;
+    }
+
+    .pageHeader {
+        max-width: 75%;
     }
 }
 
