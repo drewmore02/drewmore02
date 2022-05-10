@@ -36,6 +36,7 @@ function fill_rows(mysqli $dbc) {
       echo '<td>' . $event['eventDate'] . '</td>';
       echo '<td class="hidden">' . $event['location'] . '</td>';
       echo '<td class="hidden">' . $event['eventTime'] . '</td>';
+      echo '<td class="hidden">' . $event['imgFilePath'] . '</td>';
       echo '<td class="hidden">' . $event['description'] . '</td>';
 
       echo '<td>';
@@ -51,7 +52,10 @@ function fill_rows(mysqli $dbc) {
 
 ?>
 
-<?php include("templates/eventstop.php"); ?>
+<?php 
+  $css = ["styles.css", "edit.css", "contactUs.css"];
+  include("templates/top.php");
+?>
 
 <script>
   $(document).ready(function(){
@@ -65,7 +69,8 @@ function fill_rows(mysqli $dbc) {
       $("#edit-date").val(columns[2].innerText);
       $("#edit-location").val(columns[3].innerText);
       $("#edit-time").val(columns[4].innerText);
-      $("#edit-description").val(columns[5].innerText);
+      $("#edit-img").val(columns[5].innerText);
+      $("#edit-description").val(columns[6].innerText);
 
       // add value to delete box
       $('#delete-id').val(columns[0].innerText);
@@ -101,6 +106,8 @@ function fill_rows(mysqli $dbc) {
       <input id="edit-location" name="edit-location" type="text"><br>
       <label for="edit-time">Time</label><br>
       <input id="edit-time" name="edit-time" type="text"><br>
+      <label for="edit-img">Image</label><br>
+      <input id="edit-img" name="edit-img" type="text"><br>
       <label for="edit-description">Description</label><br>
       <textarea id="edit-description" name="edit-description" form="edit" placeholder="This is not secure"></textarea><br>
       <input type="submit" value="Update">
@@ -118,6 +125,8 @@ function fill_rows(mysqli $dbc) {
       <input id="add-location" name="add-location" type="text"><br>
       <label for="add-time">Time</label><br>
       <input id="add-time" name="add-time" type="text"><br>
+      <label for="add-img">Image</label><br>
+      <input id="add-img" name="add-img" type="text"><br>
       <label for="add-description">Description</label><br>
       <textarea id="add-description" name="add-description" form="add"></textarea><br>
       <input type="submit" value="Add">

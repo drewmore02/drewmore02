@@ -40,120 +40,67 @@ $webmasterSrc = $webmasterInfo["profileSrc"];
 
 $treasurerName = $treasurerInfo["memberName"];
 $treasurerSrc = $treasurerInfo["profileSrc"];
+
+$css = ["styles.css", "meetTheboard.css"];
+include("templates/top.php");
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meet The Board</title>
-    <link rel="icon" type="image/x-icon" href="images/myIcon.ico">
-    <link rel="stylesheet" href="css/meetTheboard.css">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-
-<body>
-    <header>
-        <img class="logo" src="images/omtech_old_logo_2.png" alt="OmTech Logo">
-        <h2>Organization for Minorities in TECHnology</h2>
-      </header>
-      <div class="header">
-        <div class="navBar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="aboutus.html">About</a></li>
-                <li><a href="events.php">Events</a></li>
-                <li><a href="meettheboard.php">Board</a></li>
-                <li><a href="news.php">News</a></li>
-                <li><a href="contactus.html">Contact Us</a></li>
-                <li><a href="loginpage.php">Admin Login</a></li>
-            </ul>
+<div class="cards">
+    <div class="card">
+        <img class="pic" src="<?php echo $presSrc?>" alt="OmTech President">
+        <div class="content">
+            <h2>President:</h2>
+            <h3><?php echo $presName?></h3>
+            <br/>
         </div>
-        <div class="dropDown">
-            <button class="menuButton">Menu</button>
-            <div class="dropDownChild">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="aboutus.html">About</a></li>
-                    <li><a href="events.php">Events</a></li>
-                    <li><a href="meettheboard.php">Board</a></li>
-                    <li><a href="news.php">News</a></li>
-                    <li><a href="contactus.html">Contact Us</a></li>
-                    <li><a href="loginpage.php">Admin Login</a></li>
-                </ul>
-            </div>
-        </div>
-        </div>
-    <div class="cards">
-        <div class="card">
-            <img class="pic" src="<?php echo $presSrc?>" alt="OmTech President">
-            <div class="content">
-                <h2>President:</h2>
-                <h3><?php echo $presName?></h3>
-                <br/>
-            </div>
-            <div class = "footer">
-                <h5><a class = "execLink" href="meetthepres.php">Meet the President!</a></h5>
-            </div>
-        </div>
-        <div class="card">
-            <img class="pic" src="<?php echo $vpSrc?>" alt="OmTech VP & Treasurer">
-            <div class="content">
-                <h2>Vice President:</h2>
-                <h3><?php echo $vpName?></h3>
-                <br/>
-            </div>
-            <div class = "footer">
-                <h5><a class = "execLink" href="meetthevp.php">Meet the Vice President!</a></h5>
-            </div>
-        </div>
-        <div class="card">
-            <img class="pic" src="<?php echo $secSrc?>" alt="OmTech Secretary">
-            <div class="content">
-                <h2>Secretary:</h2>
-                <h3><?php echo $secName?></h3>
-                <br/>
-            </div>
-            <div class = "footer">
-                <h5><a class = "execLink" href="meetthesecretary.php">Meet the Secretary!</a></h5>
-            </div>
-        </div>
-        <div class="card">
-            <img class="pic" src="<?php echo $webmasterSrc?>" alt="OmTech Webmaster">
-            <div class="content">
-                <h2>Webmaster:</h2>
-                <h3><?php echo $webmasterName?></h3>
-                <br/>
-            </div>
-            <div class = "footer">
-                <h5><a class = "execLink" href="meetthewebmaster.php">Meet the Webmaster!</a></h5>
-            </div>
-        </div>
-        <div class="card">
-            <img class="pic" src="<?php echo $treasurerSrc?>" alt="OmTech VP & Treasurer">
-            <div class="content">
-                <h2>Treasurer:</h2>
-                <h3><?php echo $treasurerName?></h3>
-                <br/>
-            </div>
-            <div class = "footer">
-                <h5><a class = "execLink" href="meetthetreasurer.php">Meet the Treasurer!</a></h5>
-            </div>
+        <div class = "footer">
+            <h5><a class = "execLink" href="meetthepres.php">Meet the President!</a></h5>
         </div>
     </div>
-    <footer>
-        <div class = "contactUs">
-          <h4>Contact Us</h4>
-            <p>Email: omTechUWEC@outlook.com</p>
+    <div class="card">
+        <img class="pic" src="<?php echo $vpSrc?>" alt="OmTech VP & Treasurer">
+        <div class="content">
+            <h2>Vice President:</h2>
+            <h3><?php echo $vpName?></h3>
+            <br/>
         </div>
-        <div class = "facebookInfo">
-          <h4>Follow our Facebook Group</h4>
-            <p><a class="footerLink" href = "https://www.facebook.com/groups/uwecomtech" target = "_blank" >UWEC OMTech - Organization for Minorities in Technology</a></p>
+        <div class = "footer">
+            <h5><a class = "execLink" href="meetthevp.php">Meet the Vice President!</a></h5>
         </div>
-      </footer>
-</body>
+    </div>
+    <div class="card">
+        <img class="pic" src="<?php echo $secSrc?>" alt="OmTech Secretary">
+        <div class="content">
+            <h2>Secretary:</h2>
+            <h3><?php echo $secName?></h3>
+            <br/>
+        </div>
+        <div class = "footer">
+            <h5><a class = "execLink" href="meetthesecretary.php">Meet the Secretary!</a></h5>
+        </div>
+    </div>
+    <div class="card">
+        <img class="pic" src="<?php echo $webmasterSrc?>" alt="OmTech Webmaster">
+        <div class="content">
+            <h2>Webmaster:</h2>
+            <h3><?php echo $webmasterName?></h3>
+            <br/>
+        </div>
+        <div class = "footer">
+            <h5><a class = "execLink" href="meetthewebmaster.php">Meet the Webmaster!</a></h5>
+        </div>
+    </div>
+    <div class="card">
+        <img class="pic" src="<?php echo $treasurerSrc?>" alt="OmTech VP & Treasurer">
+        <div class="content">
+            <h2>Treasurer:</h2>
+            <h3><?php echo $treasurerName?></h3>
+            <br/>
+        </div>
+        <div class = "footer">
+            <h5><a class = "execLink" href="meetthetreasurer.php">Meet the Treasurer!</a></h5>
+        </div>
+    </div>
+</div>
 
-</html>
+<?php include("templates/bottom.php");

@@ -1,7 +1,7 @@
 .card{
     flex: 1;
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     line-height: 1.5em;
     border-style: ridge;
     border-radius: 10px;
@@ -23,49 +23,51 @@ h1{
 
 .container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
+    align-items: center;
 }
 
 .photoContainer{
-    max-width: 50%;
-    max-height: 75vh;
-    margin: 5px;
+    max-width: 100%;
+    margin-bottom: 2.5%;
 }
 
-.mainPhoto{
-    margin-top: 20%;
+.slides{
+    display: none;
+}
+
+.fade{
+    animation-name: fade;
+    animation-duration: 1.75s;
+}
+
+@keyframes fade{
+    from{opacity: .3}
+    to{opacity: 1}
+}
+
+.photo{
     border-radius: 10px;
     max-width: 100%;
-    max-height: 75vh;
-    margin-right: 20%;
-}
-
-.extraPhoto{
-    display:none;
+    max-height: 400px;
 }
 
 .textSection{
-    max-width: 75%;
+    max-width: 100%;
+    padding: 2.5%;
 }
 
 @media (max-width: 800px){
-
-    .mainPhoto{
-        margin-top: 5%;
-    }
-    .extraPhoto{
-        border-radius: 10px;
-        display: block;
-        max-width: 100%;
-        margin-top: 7%;
-    }
-
     .pageHeader{
         max-width: 50%;
     }
+
+    .photoContainer{
+        max-width: 80%;
+    }
     
     .textSection{
-        max-width: 50%;
+        max-width: 100%;
     }
 }
 

@@ -15,6 +15,7 @@ function update_event(mysqli $dbc, array $request) {
     $eventDate = $request['edit-date'];
     $location = $request['edit-location'];
     $eventTime = $request['edit-time'];
+    $imgFilePath = $request['edit-img'];
     $description = $request['edit-description'];
     
     $query = "UPDATE groupevents SET " .
@@ -22,6 +23,7 @@ function update_event(mysqli $dbc, array $request) {
             "eventDate = '$eventDate', " .
             "location = '$location', " .
             "eventTime = '$eventTime', " .
+            "imgFilePath = '$imgFilePath', " .
             "description = '$description' " .
             "WHERE id = '$id'";
 
@@ -33,11 +35,12 @@ function insert_event(mysqli $dbc, array $request) {
     $eventDate = $request['add-date'];
     $location = $request['add-location'];
     $eventTime = $request['add-time'];
+    $imgFilePath = $request['add-img'];
     $description = $request['add-description'];
 
     $query = "INSERT INTO groupevents " .
-            "(name, eventDate, location, eventTime, description) VALUES " .
-            "('$name','$eventDate','$location','$eventTime','$description')";
+            "(name, eventDate, location, eventTime, imgFilePath, description) VALUES " .
+            "('$name','$eventDate','$location','$eventTime','$imgFilePath','$description')";
 
     $request = mysqli_query($dbc, $query);
 
@@ -51,15 +54,17 @@ function insert_event(mysqli $dbc, array $request) {
 }
 
 function get_events(mysqli $dbc) {
-    $query = "SELECT id, name, eventDate, location, eventTime, description FROM groupevents";
+    $query = "SELECT id, name, eventDate, location, eventTime, imgFilePath, description FROM groupevents";
     $result = mysqli_query($dbc, $query);
-    $events = array();
+    // $events = array();
 
-    if($result) {
-        while($row = mysqli_fetch_array($result)) {
-            array_push($events, $row);
-        }
-    }
+    // if($result) {
+    //     while($row = mysqli_fetch_array($result)) {
+    //         array_push($events, $row);
+    //     }
+    // }
+
+    $events = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
     return $events;
 }

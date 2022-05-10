@@ -15,30 +15,33 @@ mysqli_free_result($result);
 //close connection
 mysqli_close($dbc);
 
-include("templates/newstop.php"); ?>
+$css = ["styles.css", "newsStyle.css"];
+include("templates/top.php");
 
-    <div class="pageHeader">
-        <h1>News</h1>
-    </div>
-    <div class="cards">
-        <?php foreach($news as $newsbit) {?>
+?>
 
-        <div class="card">
-            <div class="articleText">
-                <div class="articleHeader">
-                    <h2 class="articleTitle"><?php echo htmlspecialchars($newsbit['title']); ?></h2>
-                </div>
-                <div class="articleInfo">
-                    <p class="articleContent"><?php echo htmlspecialchars($newsbit['description']); ?></p>
-                </div>
+<div class="pageHeader">
+    <h1>News</h1>
+</div>
+<div class="cards">
+    <?php foreach($news as $newsbit) {?>
+
+    <div class="card">
+        <div class="articleText">
+            <div class="articleHeader">
+                <h2 class="articleTitle"><?php echo htmlspecialchars($newsbit['title']); ?></h2>
             </div>
-            <div class="photoContainer">
-                <img class="articlePhoto" src="<?php echo $newsbit['imgFilePath']; ?>" alt = "<?php echo $newsbit['imgAlt']; ?>" >
+            <div class="articleInfo">
+                <p class="articleContent"><?php echo htmlspecialchars($newsbit['description']); ?></p>
             </div>
         </div>
-
-        <?php } ?>
-        
+        <div class="photoContainer">
+            <?php echo '<img class="articlePhoto" src="' . $newsbit['imgFilePath'] . '">'; ?>
+        </div>
     </div>
+
+    <?php } ?>
+    
+</div>
 
 <?php include("templates/bottom.php"); ?>
