@@ -10,7 +10,6 @@ $email = "";
 $message = "";
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    echo $_REQUEST['name'];
     if(empty($_REQUEST['name'])){
         $nameErr = "Please enter your name";
         echo '<script>window.location.replace("./contactus.html");alert("Please enter your name!");</script>';
@@ -21,7 +20,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $name = $data;
         if(!preg_match("/^[a-zA-Z-' ]*$/", $name)){
             $nameErr = "Only letters and spaces can be used";
-            echo '<script>window.location.replace("./contactus.html");alert("Only letters or spaces can be used!");</script>'
+            echo '<script>window.location.replace("./contactus.html");alert("Only letters or spaces can be used!");</script>';
             exit();;
         }
     }
@@ -49,16 +48,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $message = $data;
     }
     if(empty($nameErr) && empty($emailErr) && empty($messageErr)){
-        $subject = 'Contact Us Form Submission - ' .$name;
-        $headers = 'MIME-Version: 1.0' . "\r\n";
-        $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-        $headers .= 'From: '.$email."\r\n". 'Reply-To: '.$email."\r\n" . 'X-Mailer: PHP/' . phpversion();
-        if(mail("softballove456@gmail.com", $subject, $message, $headers)){
-            echo 'Your form has been submitted.';
-            exit();
+        $sql = "INSERT INTO contactSubmissions (userName, userEmail, userMessage) VALUES('$name', '$email', '$message')";
+        if(@mysqli_query($dbc, $sql)){
+            echo '<script>window.location.replace("./contactus.html");alert("Thank you your message has been sent!");</script>';
         }else{
-            echo 'Your form was not submitted. Please try again!';
-            exit();
+            echo '<script>window.location.replace("./contactus.html");alert("An error has occurred when submitting your message. Please Try Again!");</script>';
+            mysqli_error($dbc);
         }
     }else{
         echo 'Your form was not submitted. Please try again!';

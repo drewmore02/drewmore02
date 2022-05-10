@@ -23,32 +23,32 @@ if(isset($_SESSION['success']) && $_SESSION['success'] === TRUE){
         <h2>Organization for Minorities in TECHnology</h2>
       </header>
       <div class="header">
-        <div class="navBar">
+    <div class="navBar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="events.php">Events</a></li>
+            <li><a href="meettheboard.php">Board</a></li>
+            <li><a href="news.php">News</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="loginpage.php">Admin Login</a></li>
+        </ul>
+    </div>
+    <div class="dropDown">
+        <button class="menuButton">Menu</button>
+        <div class="dropDownChild">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="aboutus.html">About</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="meettheboard.html">Board</a></li>
-                <li><a href="news.html">News</a></li>
+                <li><a href="events.php">Events</a></li>
+                <li><a href="meettheboard.php">Board</a></li>
+                <li><a href="news.php">News</a></li>
                 <li><a href="contactus.html">Contact Us</a></li>
                 <li><a href="loginpage.php">Admin Login</a></li>
             </ul>
         </div>
-        <div class="dropDown">
-            <button class="menuButton">Menu</button>
-            <div class="dropDownChild">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="aboutus.html">About</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="meettheboard.html">Board</a></li>
-                    <li><a href="news.html">News</a></li>
-                    <li><a href="contactus.html">Contact Us</a></li>
-                    <li><a href="loginpage.php">Admin Login</a></li>
-                </ul>
-            </div>
-        </div>
     </div>
+</div>
     <div class="pageHeader">
         <h1>Webpage Administrator Login:</h1>
       </div>

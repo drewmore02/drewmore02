@@ -21,9 +21,9 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="aboutus.html">About</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="meettheboard.html">Board</a></li>
-                <li><a href="news.html">News</a></li>
+                <li><a href="events.php">Events</a></li>
+                <li><a href="meettheboard.php">Board</a></li>
+                <li><a href="news.php">News</a></li>
                 <li><a href="contactus.html">Contact Us</a></li>
                 <li><a href="loginpage.php">Admin Login</a></li>
             </ul>
@@ -34,9 +34,9 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="aboutus.html">About</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="meettheboard.html">Board</a></li>
-                    <li><a href="news.html">News</a></li>
+                    <li><a href="events.php">Events</a></li>
+                    <li><a href="meettheboard.php">Board</a></li>
+                    <li><a href="news.php">News</a></li>
                     <li><a href="contactus.html">Contact Us</a></li>
                     <li><a href="loginpage.php">Admin Login</a></li>
                 </ul>
@@ -49,10 +49,21 @@
     <div class="card">
         <div class="container">
             <div class="photoContainer">
-                <img class="mainPhoto" src="images/omtech_CSIntro_1.jpg" alt = "photo of executive board">
-                <img class="extraPhoto" src="images/omtech_hhn_1.jpg" alt = "photo of members at homework help night">
-                <img class="extraPhoto" src="images/omtech_scavenger_hunt_4.jpg" alt = "photo of members at the scavenger hunt">
-                <img class="extraPhoto" src="images/omtech_scavenger_hunt_3.jpg" alt = "photo of members at the scavenger hunt">
+                <div class = "slides fade">
+                    <img class="photo" src="images/omtech_CSIntro_2.jpg" alt = "photo of executive board">
+                </div>
+                <div class = "slides fade">
+                    <img class="photo" src="images/omtech_hhn_1.jpg" alt = "photo of members at homework help night">
+                </div>
+                <div class = "slides fade">
+                    <img class="photo" src="images/omtech_scavenger_hunt_3.jpg" alt = "photo of members at the scavenger hunt">
+                </div>
+                <div class = "slides fade">
+                    <img class="photo" src="images/omtech_hhn_2.jpg" alt = "photo of members at homework help night">
+                </div>
+                <div class = "slides fade">
+                    <img class="photo" src="images/omtech_scavenger_hunt_2.jpg" alt = "photo of members at the scavenger hunt">
+                </div>
             </div>
             <div class="textSection">
                 <h2 class="aboutHeader">Who We Are & What We Do:</h2>
@@ -92,3 +103,23 @@
 </body>
 
 </html>
+
+<script>
+let currentSlide = 0; 
+runSlides();
+
+function runSlides(){
+    let index = 0; 
+    let slides = document.getElementsByClassName("slides");
+
+    for(index = 0; index < slides.length; index++){
+        slides[index].style.display = "none";
+    }
+    currentSlide++;
+    if(currentSlide > slides.length){
+        currentSlide = 1;
+    }
+    slides[currentSlide-1].style.display = "block";
+    setTimeout(runSlides, 3000);
+}
+</script>

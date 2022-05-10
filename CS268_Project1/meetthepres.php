@@ -1,7 +1,7 @@
 <?php
 require_once('databaseconn.php');
 
-$getInfo = "SELECT position, memberName, gradeYear, major, minor, omtechFav, omtechEvent, uwecFav, funFact FROM members WHERE position = 'President'";
+$getInfo = "SELECT * FROM members WHERE position = 'President'";
 
 $response = @mysqli_query($dbc, $getInfo);
 
@@ -21,6 +21,8 @@ $omtechFav = $info['omtechFav'];
 $omtechEvent = $info['omtechEvent'];
 $uwecFav = $info['uwecFav'];
 $funFact = $info['funFact'];
+$profileSrc = $info['profileSrc'];
+$memberSrc = $info['memberSrc'];
 ?>
 
 <!DOCTYPE html>
@@ -46,9 +48,9 @@ $funFact = $info['funFact'];
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="aboutus.html">About</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="meettheboard.html">Board</a></li>
-                <li><a href="news.html">News</a></li>
+                <li><a href="events.php">Events</a></li>
+                <li><a href="meettheboard.php">Board</a></li>
+                <li><a href="news.php">News</a></li>
                 <li><a href="contactus.html">Contact Us</a></li>
                 <li><a href="loginpage.php">Admin Login</a></li>
             </ul>
@@ -59,22 +61,22 @@ $funFact = $info['funFact'];
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="aboutus.html">About</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="meettheboard.html">Board</a></li>
-                    <li><a href="news.html">News</a></li>
+                    <li><a href="events.php">Events</a></li>
+                    <li><a href="meettheboard.php">Board</a></li>
+                    <li><a href="news.php">News</a></li>
                     <li><a href="contactus.html">Contact Us</a></li>
                     <li><a href="loginpage.php">Admin Login</a></li>
                 </ul>
             </div>
         </div>
-    </div>
+        </div>
     <div class="pageHeader">
         <h1><?php echo $position ?></h1>
     </div>
     <div class="contentContainer">
         <div class="photoContainer">
-            <img class='photo' src='images\katie_headshot.jpg' />
-            <img class="memberPhoto" src="images/omtech_asd_photo.jpg" />
+            <img class='photo' src='<?php echo $profileSrc ?>' src = "OmTech President"/>
+            <img class="memberPhoto" src="<?php echo $memberSrc ?>" src = "President at a meeting"/>
         </div>
         <div class="card">
             <div class="container">

@@ -1,7 +1,7 @@
 <?php
 require_once('databaseconn.php');
 
-$getInfo = "SELECT position, memberName, gradeYear, major, minor, omtechFav, omtechEvent, uwecFav, funFact FROM members WHERE position = 'Webmaster'";
+$getInfo = "SELECT * FROM members WHERE position = 'Webmaster'";
 
 $response = @mysqli_query($dbc, $getInfo);
 
@@ -46,9 +46,9 @@ $funFact = $info['funFact'];
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="aboutus.html">About</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="meettheboard.html">Board</a></li>
-                <li><a href="news.html">News</a></li>
+                <li><a href="events.php">Events</a></li>
+                <li><a href="meettheboard.php">Board</a></li>
+                <li><a href="news.php">News</a></li>
                 <li><a href="contactus.html">Contact Us</a></li>
                 <li><a href="loginpage.php">Admin Login</a></li>
             </ul>
@@ -59,22 +59,22 @@ $funFact = $info['funFact'];
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="aboutus.html">About</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="meettheboard.html">Board</a></li>
-                    <li><a href="news.html">News</a></li>
+                    <li><a href="events.php">Events</a></li>
+                    <li><a href="meettheboard.php">Board</a></li>
+                    <li><a href="news.php">News</a></li>
                     <li><a href="contactus.html">Contact Us</a></li>
                     <li><a href="loginpage.php">Admin Login</a></li>
                 </ul>
             </div>
         </div>
-    </div>
+        </div>
     <div class="pageHeader">
         <h1><?php echo $position ?></h1>
     </div>
     <div class="contentContainer">
         <div class="photoContainer">
-        <img class="photo" src="images/collin_headshot.jpg" alt = "Omtech Webmaster">
-        <img class="memberPhoto" src="images/omtech_icecreamsocial_2.jpg" alt = "Collin at a meeting">
+        <img class="photo" src="<?php echo $profileSrc ?>" alt = "Omtech Webmaster">        
+        <img class="memberPhoto" src="<?php echo $memberSrc ?>" alt = "Webmaster at a meeting">
         </div>
         <div class="card">
             <div class="container">

@@ -5,7 +5,7 @@ if(!isset($_SESSION['success']) || (isset($_SESSION['success']) && $_SESSION['su
 }
 require_once('databaseconn.php');
 
-$getInfo = "SELECT position, memberName, gradeYear, major, minor, omtechFav, omtechEvent, uwecFav, funFact FROM members WHERE position = 'Webmaster'";
+$getInfo = "SELECT * FROM members WHERE position = 'Webmaster'";
 
 $response = @mysqli_query($dbc, $getInfo);
 
@@ -47,32 +47,32 @@ $funFact = $info['funFact'];
     <h2>Organization for Minorities in TECHnology</h2>
   </header>
   <div class="header">
-        <div class="navBar">
+    <div class="navBar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="events.php">Events</a></li>
+            <li><a href="meettheboard.php">Board</a></li>
+            <li><a href="news.php">News</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="loginpage.php">Admin Login</a></li>
+        </ul>
+    </div>
+    <div class="dropDown">
+        <button class="menuButton">Menu</button>
+        <div class="dropDownChild">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="aboutus.html">About</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="meettheboard.html">Board</a></li>
-                <li><a href="news.html">News</a></li>
+                <li><a href="events.php">Events</a></li>
+                <li><a href="meettheboard.php">Board</a></li>
+                <li><a href="news.php">News</a></li>
                 <li><a href="contactus.html">Contact Us</a></li>
                 <li><a href="loginpage.php">Admin Login</a></li>
             </ul>
         </div>
-        <div class="dropDown">
-            <button class="menuButton">Menu</button>
-            <div class="dropDownChild">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="aboutus.html">About</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="meettheboard.html">Board</a></li>
-                    <li><a href="news.html">News</a></li>
-                    <li><a href="contactus.html">Contact Us</a></li>
-                    <li><a href="loginpage.php">Admin Login</a></li>
-                </ul>
-            </div>
-        </div>
     </div>
+</div>
 <div class="pageHeader">
     <h1>Edit the Webmaster's Information Here:</h1>
   </div>
@@ -133,6 +133,20 @@ $funFact = $info['funFact'];
         id="funFact"
         name="funFact"
       ><?php echo $funFact ?></textarea>
+      <label for="profileSrc">Profile Photo Link:</label>
+      <input
+        type="text"
+        id="profileSrc"
+        name="profileSrc"
+        placeholder = "Make sure your photo is already in the images folder!"
+      />
+      <label for="memberSrc">Member Photo Link:</label>
+      <input
+        type="text"
+        id="memberSrc"
+        name="memberSrc"
+        placeholder = "Make sure your photo is already in the images folder!"
+      />
       <br />
         <input type="submit" value="Submit" />
     </form>

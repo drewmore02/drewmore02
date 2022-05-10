@@ -41,7 +41,7 @@ function fill_rows(mysqli $dbc) {
       echo '<td>';
       echo '<input name="delete" form="delete-event" type="hidden" value="delete">';
       echo '<input name="delete-id" form="delete-event" type="hidden" value="' . $event['id'] . '">';
-      echo '<button type="submit" form="delete-event">&ZeroWidthSpace;</button>';
+      echo '<button class = "editButton" type="submit" form="delete-event">&ZeroWidthSpace;</button>';
       echo '</td>';
       
 
@@ -51,7 +51,7 @@ function fill_rows(mysqli $dbc) {
 
 ?>
 
-<?php include("templates/top.php"); ?>
+<?php include("templates/eventstop.php"); ?>
 
 <script>
   $(document).ready(function(){
