@@ -55,14 +55,8 @@ function insert_event(mysqli $dbc, array $request) {
 
 function get_events(mysqli $dbc) {
     $query = "SELECT id, name, eventDate, location, eventTime, imgFilePath, description FROM groupevents";
+    
     $result = mysqli_query($dbc, $query);
-    // $events = array();
-
-    // if($result) {
-    //     while($row = mysqli_fetch_array($result)) {
-    //         array_push($events, $row);
-    //     }
-    // }
 
     $events = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
@@ -73,6 +67,57 @@ function delete_event(mysqli $dbc, array $request) {
     $id = $request['delete-id'];
 
     $query = "DELETE FROM groupevents WHERE id='$id'";
+    $result = mysqli_query($dbc, $query);
+
+    if(!$result) {
+        echo mysqli_error($dbc);
+    }
+}
+
+function get_news(mysqli $dbc) {
+    $query = "SELECT id, title, description, imgFilePath, imgAlt FROM news";
+
+    $result = mysqli_query($dbc, $query);
+
+    $news = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+    return $news;
+}
+
+function update_news(mysqli $dbc, array $request) {
+    $id = $request['edit-id'];
+    $title = $request['edit-title'];
+    $imgFilePath = $request['edit-imgfp'];
+    $imgAlt = $request['edit-imgalt'];
+    $description = $request['edit-description'];
+    
+    $query = "UPDATE groupevents SET " .
+            "title = '$title', " .
+            "description = '$description', " .
+            "imgFilePath = '$imgFilePath', " .
+            "imgAlt = '$imgAlt' " .
+            "WHERE id = '$id'";
+
+    $request = mysqli_query($dbc, $query);
+}
+
+function insert_news(mysqli $dbc, array $request) {
+    $title = $request['add-title'];
+    $description = $request['add-description'];
+    $imgFilePath = $request['add-imgfp'];
+    $imgAlt = $request['add-imgalt'];
+
+    $query = "INSERT INTO news " .
+            "(title, description, imgFilePath, imgAlt) VALUES " .
+            "('$title','$description','$imgFilePath','$imgAlt')";
+
+    $request = mysqli_query($dbc, $query);
+}
+
+function delete_news(mysqli $dbc, array $request) {
+    $id = $request['delete-id'];
+
+    $query = "DELETE FROM news WHERE id='$id'";
     $result = mysqli_query($dbc, $query);
 
     if(!$result) {

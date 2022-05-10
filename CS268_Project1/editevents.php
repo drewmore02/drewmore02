@@ -50,11 +50,8 @@ function fill_rows(mysqli $dbc) {
   }
 }
 
-?>
-
-<?php 
-  $css = ["styles.css", "edit.css", "contactUs.css"];
-  include("templates/top.php");
+$css = ["styles.css", "edit.css", "contactUs.css"];
+include("templates/top.php");
 ?>
 
 <script>

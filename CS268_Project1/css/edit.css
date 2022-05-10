@@ -30,6 +30,10 @@ table.events tr:hover td {
     background-color: rgb(185, 184, 184);
 }
 
+table.news tr:hover td {
+    background-color: rgb(185, 184, 184);
+}
+
 .hidden {
     display: none;
 }

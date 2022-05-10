@@ -5,7 +5,7 @@ include('databaseconn.php');
 $events = get_events($dbc);
 
 $css = ["styles.css", "events.css"];
-include("templates/top.php");
+include('templates/top.php');
 
 ?>
 
@@ -22,9 +22,9 @@ include("templates/top.php");
         <div class="event-line"><img class="card-icons" src="images/pin.png" alt = "location pin"> <?php echo htmlspecialchars($event['location']);?></div>
         <br>
         <p class="eventText"><?php echo htmlspecialchars($event['description']);?></p>
-    </div>
+        </div>
     <?php } ?>
 
 </div>
 
-<?php include("templates/bottom.php"); ?>
+<?php include('templates/bottom.php'); ?>
