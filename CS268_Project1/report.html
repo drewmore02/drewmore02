@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Report</title>
+  </head>
+  <body>
+    <p>
+      We have met the expectations of this project in the following ways:
+      <br />
+      1. We chose to make a website for OmTech which is a student organization
+      on campus. Laura is on the organization's executive board, but she is not
+      the only member.
+      <br />
+      2. The pages on our website all use a cohesive header that includes
+      omtech's logo and the organization's name.
+      <br />
+      3. Our site includes the ten following pages:
+
+      <br />- About Us: a general introduction to the group
+      <br />
+      - Contact Us: gives users a way to reach out to the board
+      <br />
+      - Meet the Board: Overview of all the members on the executive board
+      <br />
+      - Meet the President: Lets users get to know more about omtech's president
+      <br />
+      - Meet the VP: Lets users get to know more about omtech's vp and
+      Treasurer.
+      <br />
+      - Meet the secretary: Lets users get to know more about omtech's secretary
+      <br />
+      - Meet the webmaster: Lets users get to know more about omtech's webmaster
+      <br />
+      - Events: Gives an overview of each of the events being held in the
+      current Semester
+      <br />
+      - News: Provides a single source where users can find updates on what
+      omtech is doing throughout the year
+      <br />
+      - Homepage: General landing page that gives users a look into the
+      organization
+      <br />
+      4. We include navigational links in our navbar as well as in the footer to
+      an external link and on our meet the board page to thier individual
+      biography pages.
+      <br />
+      5. We have media queries on all pages to ensure that the website looks
+      good for any type of device.
+      <br />
+      6. We have a global style sheet that keeps the style of all of our main
+      elements the same throughout the entire site and each page has their own
+      style sheet for anything that is individualized to them.
+      <br />
+      7. All of our images have alt attributes that give a description of the
+      content of the image.
+      <br />
+      8. Each page has the same favicon which is omtech's Logo.
+      <br />
+      9. All of our images are stored in a folder titled images and all of our
+      css are stored in a folder called css.
+      <br />
+      10. We did not use any libraries or frameworks on this project.
+      <br />
+      11. All names of files are entirely lowercase
+      <br />
+      12. Our content is neatly aligned and the axes are claerly visible.
+      <br />
+      13. We use multiple font faces and multiple font families throughout our
+      website including monospace, Trebuchet MS, and gill sans just to name a
+      few.
+      <br />
+      14. Our site does implement 4 different pages with forms. We have our
+      events, news, contact, and admin pages
+      <br />
+      15. We include a link to Omtech's facebook group in the footer of every
+      page. This link opens a new tab and does not just replace the original
+      page.
+      <br />
+      16. To our knowledge our source code seems to be readable, we were all
+      able to work collaboratively on this project without getting confused on
+      classes, names, or any other aspect.
+      <br />
+      17. Our site does include an animation on the about page.
+      <br />
+      18. Yes, our site relies on MySQL as our database for storing and
+      retrieving data.
+      <br />
+      19. We have an admin login button in the navbar with admin login
+      credentials. It takes you to an administrator panel where you can add
+      events and add news.
+      <br />
+      20. We fixed the coloring on the board members page as well as fixing the
+      nav bar so that it doesn't follow the page downward.
+      <br />
+    </p>
+    <h4>Critique From Client:</h4>
+    <p>OmTech loves the updates to the website! The love the functionality added with PHP which will make it easy for future 
+        Webmasters to be able to edit the page without having to change the actual code of the site. Looking forward OmTech
+        is going to hosting the website so it can be used after this project. </p>
+    <h4>Comments from Project 1</h4>
+    <p>
+      Colors on the meet the board page were changed to make the site more cohesive. We also updated the nav bar so that it 
+      is no longer moving over the rest of the elements of the page and is now stuck to the top. We also added minor padding
+      edits to fix the visual aspects of some pages. Finally, we focused on ensuring that everything on our page can be edited
+      through POST requests so that the website can be used by future members who may not be experienced in CS. 
+    </p>
+    <h4>Which webpages have forms in them</h4>
+    <p>The webpages with form include:</p>
+    <ul>
+      <li>Contact Us</li>
+      <li>Admin Login</li>
+      <li>Add Event</li>
+      <li>Add News</li>
+      <li>Edit President/Vice President/Secretary/Webmaster/Treasurer</li>
+    </ul>
+    <h4>Laura's Contributions</h4>
+    <p>
+        Took Drew's layout of the homepage and made it functional. Created the meet the board and each indivdual board 
+        member pages. I also created the original static news, about us, and contact us pages. I also organized all of our 
+        files to make sure they fit the proper critera for submission. Added the PHP functionality for the meet the board 
+        and individual board member pages and the contact us page along with creating a functional slideshow for the about 
+        us page. I also added the login functionality and made sure that it was secure and only authorized users could 
+        access admin only pages. I created most of the SQL queries to populate the beginning of our database. These were 
+        tweaked over time by the other two members. Finally, I made corrections to the feedback given for the first half 
+        of this project.  
+    </p>
+    <h4>Mike's Contributions</h4>
+    <p>
+      Added functionality to the admin pages for creating, reading, updating, and deleting
+      from the events and news tables in our database. There are functions for each of these in databaseconn.php,
+      and most of them just take $_POST as an argument. I created the editnews and editevents pages, and used jQuery 
+      to add onClick events so the row information would be added to the "update" section. 
+      I also created templates for the top and bottom parts of our pages so we could edit our nav bar or footer from one 
+      place instead of on every page. An array of css files accompanies the inclusion of the top template for the 
+      different styles on each page.
+    </p>
+    <h4>Drew's Contributions</h4>
+    <p>
+      Designed the original layout of the home page on canva and worked on
+      making the navbar modern-estque by having media queries in the css to make
+      it work fore resized browser or mobile devices. Worked on Contact Us page
+      styling to have the form sized properly. Wrote the get requests for the
+      news and events pages.
+    </p>
+  </body>
+</html>
